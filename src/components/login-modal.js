@@ -41,11 +41,13 @@ const LoginModal = ({ open, handleClose }) => {
       '"Segoe UI Symbol"',
     ].join(","),
   });
+
   return (
     <>
       <Dialog
         open={open}
         onClose={handleClose}
+        container={() => document.body}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
