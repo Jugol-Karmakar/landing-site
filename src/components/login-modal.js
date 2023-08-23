@@ -45,7 +45,7 @@ const LoginModal = ({ open, setOpen, handleClose }) => {
     <>
       <Dialog
         open={open}
-        onClick={() => setOpen(false)}
+        handleClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
@@ -138,7 +138,7 @@ const LoginModal = ({ open, setOpen, handleClose }) => {
           <Typography sx={{ mx: 2 }}>OR</Typography>
           <Divider color="#FFFFFF" sx={{ height: 2, width: "150px" }} />
         </Box>
-        <Paper
+        <Box
           component="form"
           sx={{
             display: "flex",
@@ -255,7 +255,7 @@ const LoginModal = ({ open, setOpen, handleClose }) => {
           >
             Login
           </LoginButton>
-        </Paper>
+        </Box>
       </Dialog>
     </>
   );
