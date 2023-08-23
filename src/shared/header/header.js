@@ -73,10 +73,12 @@ const Header = () => {
 
   const handleClickOpen = () => {
     setOpen(true);
+    document.body.style.overflow = "hidden";
   };
 
   const handleClose = () => {
     setOpen(false);
+    document.body.style.overflow = "auto";
   };
 
   return (

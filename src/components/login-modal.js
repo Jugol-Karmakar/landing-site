@@ -5,6 +5,7 @@ import {
   Checkbox,
   Dialog,
   DialogActions,
+  DialogContent,
   Divider,
   FormControlLabel,
   IconButton,
@@ -54,28 +55,24 @@ const LoginModal = ({ open, handleClose }) => {
           </IconButton>
         </DialogActions>
 
-        <>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "start",
-              px: 8,
-              mt: 3,
-              mb: 4,
-            }}
-          >
-            <Typography
-              sx={{ fontSize: 20, color: "#000000", fontWeight: 600 }}
-            >
-              Sign into your account
-            </Typography>
-            <Typography sx={{ color: "#666666", fontSize: 16 }}>
-              Access your personal space in just a few clicks
-            </Typography>
-          </Box>
-        </>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "start",
+            px: 8,
+            mt: 3,
+            mb: 4,
+          }}
+        >
+          <Typography sx={{ fontSize: 20, color: "#000000", fontWeight: 600 }}>
+            Sign into your account
+          </Typography>
+          <Typography sx={{ color: "#666666", fontSize: 16 }}>
+            Access your personal space in just a few clicks
+          </Typography>
+        </Box>
 
         <Box
           sx={{
@@ -141,7 +138,7 @@ const LoginModal = ({ open, handleClose }) => {
           <Typography sx={{ mx: 2 }}>OR</Typography>
           <Divider color="#FFFFFF" sx={{ height: 2, width: "150px" }} />
         </Box>
-        <Paper
+        <Box
           component="form"
           sx={{
             display: "flex",
@@ -258,7 +255,7 @@ const LoginModal = ({ open, handleClose }) => {
           >
             Login
           </LoginButton>
-        </Paper>
+        </Box>
       </Dialog>
     </>
   );
