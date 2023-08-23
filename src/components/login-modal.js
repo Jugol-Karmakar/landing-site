@@ -17,9 +17,8 @@ import { styled } from "@mui/material/styles";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import CloseIcon from "@mui/icons-material/Close";
-import LockIcon from "@mui/icons-material/Lock";
 
-const LoginModal = ({ open, handleClose }) => {
+const LoginModal = ({ open, setOpen, handleClose }) => {
   const LoginButton = styled(Button)({
     boxShadow: "none",
     textTransform: "none",
@@ -46,8 +45,7 @@ const LoginModal = ({ open, handleClose }) => {
     <>
       <Dialog
         open={open}
-        onClose={handleClose}
-        container={() => document.body}
+        onClick={() => setOpen(false)}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
@@ -140,7 +138,7 @@ const LoginModal = ({ open, handleClose }) => {
           <Typography sx={{ mx: 2 }}>OR</Typography>
           <Divider color="#FFFFFF" sx={{ height: 2, width: "150px" }} />
         </Box>
-        <Box
+        <Paper
           component="form"
           sx={{
             display: "flex",
@@ -257,7 +255,7 @@ const LoginModal = ({ open, handleClose }) => {
           >
             Login
           </LoginButton>
-        </Box>
+        </Paper>
       </Dialog>
     </>
   );

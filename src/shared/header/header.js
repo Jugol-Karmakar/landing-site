@@ -73,12 +73,10 @@ const Header = () => {
 
   const handleClickOpen = () => {
     setOpen(true);
-    document.body.style.overflow = "hidden";
   };
 
   const handleClose = () => {
     setOpen(false);
-    document.body.style.overflow = "auto";
   };
 
   return (
@@ -153,7 +151,7 @@ const Header = () => {
               Connection
             </ConnectionButton>
             <CompanyButton
-              onClick={handleClickOpen}
+              onClick={() => handleClickOpen(true)}
               variant="contained"
               sx={{
                 borderRadius: 200,
@@ -164,7 +162,11 @@ const Header = () => {
             >
               Company
             </CompanyButton>
-            <LoginModal open={open} handleClose={handleClose} />
+            <LoginModal
+              open={open}
+              handleClose={handleClose}
+              setOpen={setOpen}
+            />
           </Box>
         </Box>
       </Container>
