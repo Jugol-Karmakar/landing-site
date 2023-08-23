@@ -3,8 +3,35 @@ import Image from "next/image";
 import React from "react";
 import EastIcon from "@mui/icons-material/East";
 import LoginIcon from "@mui/icons-material/Login";
+import { styled } from "@mui/material/styles";
 
 const TopCompanyCard = ({ company }) => {
+  const SiteButton = styled(Button)({
+    boxShadow: "none",
+    textTransform: "none",
+    fontSize: 16,
+    padding: "6px 14px",
+    lineHeight: 1.5,
+    backgroundColor: "#DAE4FF",
+    color: "#000066",
+    borderRadius: 16,
+    fontFamily: [
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+    "&:hover": {
+      backgroundColor: "#DAE4FF",
+      boxShadow: "none",
+    },
+  });
   return (
     <Paper elevation={3} sx={{ borderRadius: "10px" }}>
       <Box
@@ -78,18 +105,18 @@ const TopCompanyCard = ({ company }) => {
       >
         <Button
           size="small"
-          sx={{ fontSize: 14, textTransform: "capitalize" }}
+          sx={{ fontSize: 14, textTransform: "capitalize", color: "#000066" }}
           endIcon={<EastIcon />}
         >
           Read reviews
         </Button>
-        <Button
+        <SiteButton
           startIcon={<LoginIcon />}
           size="small"
           sx={{ fontSize: 14, textTransform: "capitalize" }}
         >
           Website
-        </Button>
+        </SiteButton>
       </Box>
     </Paper>
   );

@@ -1,17 +1,11 @@
-import {
-  Box,
-  Container,
-  Divider,
-  Grid,
-  IconButton,
-  Typography,
-} from "@mui/material";
-import Link from "next/link";
 import React from "react";
+import { Box, Container, Grid, IconButton, Typography } from "@mui/material";
+import Link from "next/link";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import Divider from "@mui/material/Divider";
 
 const Footer = () => {
   return (
@@ -173,17 +167,7 @@ const Footer = () => {
           </Grid>
         </Grid>
 
-        <Divider
-          variant="inset"
-          sx={{
-            "& .MuiDivider-root": {
-              marginLeft: "0px",
-              borderWidth: 2,
-              borderStyle: "solid",
-              borderColor: "white",
-            },
-          }}
-        />
+        <Divider color="#FFFFFF" sx={{ height: 1, width: "100%" }} />
 
         <Box
           sx={{

@@ -34,6 +34,7 @@ const Catagories = () => {
                 fontSize: 14,
                 fontWeight: 600,
                 textTransform: "capitalize",
+                color: "#000066",
               }}
               variant="text"
               endIcon={<EastIcon />}

@@ -42,7 +42,7 @@ const TopCompany = () => {
         >
           <Button
             size="small"
-            sx={{ fontSize: 14, textTransform: "capitalize" }}
+            sx={{ fontSize: 14, textTransform: "capitalize", color: "#000066" }}
             endIcon={<EastIcon />}
           >
             Find other recommended companies

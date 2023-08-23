@@ -5,7 +5,6 @@ import {
   Box,
   Button,
   Container,
-  IconButton,
   Stack,
   Toolbar,
   Typography,
@@ -14,6 +13,60 @@ import Link from "next/link";
 import { HEADER_ITEM } from "@/components/common/constants";
 import PersonIcon from "@mui/icons-material/Person";
 import LoginModal from "@/components/login-modal";
+import { styled } from "@mui/material/styles";
+
+const CompanyButton = styled(Button)({
+  boxShadow: "none",
+  textTransform: "none",
+  fontSize: 16,
+  padding: "6px 14px",
+  lineHeight: 1.5,
+  backgroundColor: "#000066",
+  fontFamily: [
+    "-apple-system",
+    "BlinkMacSystemFont",
+    '"Segoe UI"',
+    "Roboto",
+    '"Helvetica Neue"',
+    "Arial",
+    "sans-serif",
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+  ].join(","),
+  "&:hover": {
+    backgroundColor: "#000066",
+    boxShadow: "none",
+  },
+});
+
+const ConnectionButton = styled(Button)({
+  boxShadow: "none",
+  textTransform: "none",
+  fontSize: 16,
+  padding: "6px 14px",
+  lineHeight: 1.5,
+  border: "1px solid",
+  borderColor: "#000066",
+  color: "#000066",
+  fontFamily: [
+    "-apple-system",
+    "BlinkMacSystemFont",
+    '"Segoe UI"',
+    "Roboto",
+    '"Helvetica Neue"',
+    "Arial",
+    "sans-serif",
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+  ].join(","),
+  "&:hover": {
+    color: "#FFFFFF",
+    backgroundColor: "#000066",
+    boxShadow: "none",
+  },
+});
 
 const Header = () => {
   const [open, setOpen] = React.useState(false);
@@ -86,8 +139,7 @@ const Header = () => {
               gap: 2,
             }}
           >
-            <Button
-              onClick={handleClickOpen}
+            <ConnectionButton
               variant="outlined"
               startIcon={<PersonIcon />}
               sx={{
@@ -97,19 +149,20 @@ const Header = () => {
               }}
             >
               Connection
-            </Button>
-            <LoginModal open={open} handleClose={handleClose} />
-            <Button
+            </ConnectionButton>
+            <CompanyButton
+              onClick={handleClickOpen}
               variant="contained"
               sx={{
-                backgroundColor: "000066",
-
                 borderRadius: 200,
                 textTransform: "capitalize",
+                px: 3,
+                py: 1,
               }}
             >
               Company
-            </Button>
+            </CompanyButton>
+            <LoginModal open={open} handleClose={handleClose} />
           </Box>
         </Box>
       </Container>
