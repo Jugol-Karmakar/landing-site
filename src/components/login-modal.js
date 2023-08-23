@@ -209,8 +209,7 @@ const LoginModal = ({ open, handleClose }) => {
             </Box>
             <TextField
               id="outlined-basic"
-              label="Enter Your 
-            Password"
+              placeholder="Enter Your Password"
               variant="outlined"
               required
               fullWidth
